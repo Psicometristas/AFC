@@ -38,7 +38,7 @@ summary(AFC_Modelo_2, fit.measures=TRUE, standardized=T, rsquare=T)
 fitMeasures(AFC_Modelo_2, fit.measures = c("chisq", "df","srmr", "rmsea", "tli", "cfi"))
 semPaths(AFC_Modelo_2, nCharNodes = 0,intercepts = FALSE, edge.label.cex=1.3, optimizeLatRes = T, groups = "lat",pastel = T, sizeInt=5,edge.color ="blue",esize = 5, label.prop=0,sizeLat = 11,"std",layout="circle3", exoVar = F)
 
-#Resumen de los índices de ajuste de los 3 modelos competidores#
+#Resumen de los índices de ajuste de los 2 modelos competidores#
 resumen_fit <- rbind(fitmeasures(AFC_Modelo_1,fit.measures = c("chisq", "df","srmr", "tli", "cfi","rmsea","rmsea.ci.lower","rmsea.ci.upper")),
                      fitmeasures(AFC_Modelo_2, fit.measures = c("chisq", "df","srmr", "tli", "cfi","rmsea","rmsea.ci.lower","rmsea.ci.upper")))
 rownames(resumen_fit) <- c("3 factores oblicuos", "Unifactorial")
